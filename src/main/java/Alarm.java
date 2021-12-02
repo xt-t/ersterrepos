@@ -10,15 +10,11 @@ public class Alarm {
     }
 
     public static String alarm(String a) {
-        switch (a) {
-            case "rot":
-                return ("keine Personen erlaubt");
-            case "gelb":
-                return ("max 30 Personen erlaubt");
-            case "grün":
-                return ("max 60 Personen erlaubt");
-            default:
-                return ("Falsche Eingabe.");
-        }
+        return switch (a) {
+            case "rot" -> ("keine Personen erlaubt");
+            case "gelb" -> ("max 30 Personen erlaubt");
+            case "grün" -> ("max 60 Personen erlaubt");
+            default -> ("Falsche Eingabe!");
+        };
     }
 }
